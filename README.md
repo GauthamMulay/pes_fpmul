@@ -3,7 +3,7 @@
 
 ## Simulation
 ```bash=
-iverilog controlunit.v controlunit_tb.v
+iverilog fpmul.v fpmul_tb.v
 ./a.out
 gtkwave output.vcd
 ```
@@ -19,7 +19,7 @@ gtkwave output.vcd
 yosys
 read_liberty -lib <liberty file>
 read_verilog <design file>
-synth -top CONTROL
+synth -top pes_fpmul
 abc -liberty <liberty file>
 show
 write_verilog control_netlist.v
