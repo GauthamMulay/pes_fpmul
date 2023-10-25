@@ -7,6 +7,7 @@ iverilog fpmul.v fpmul_tb.v
 ./a.out
 gtkwave output.vcd
 ```
+![sim_cmd](https://github.com/GauthamMulay/pes_fpmul/assets/113660503/b6ae81cb-906a-4991-9afa-d66ef33ee7f9)
 
 
 ### Output:
