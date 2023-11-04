@@ -39,3 +39,52 @@ gtkwave output.vcd
 ### Output:
 
 ![GLS](https://github.com/GauthamMulay/pes_fpmul/assets/113660503/923cc53e-1ade-4e03-a2cc-00fa63d51e90)
+
+# Openlane Flow
+* Set up your design file by using the following command:
+   ``` prep -design <design_file>```
+
+
+## Synthesis
+Command: ``` run_synthesis```
+
+
+
+
+## Floorplan
+Command: ``` run_floorplan```
+
+
+to view design:
+
+
+
+
+## Placement
+Command: ``` run_placement```
+
+
+to view design:
+
+
+
+
+
+## Clock tree Synthesis(CTS)
+Command: ``` run_cts```
+
+
+to view design:
+
+
+
+
+
+## Routing
+Command: ``` run_Routing```
+
+
+to view design:
+
+
+
