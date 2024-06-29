@@ -1,4 +1,32 @@
 # pes_fpmul
+## Floating point Multiplication
+### IEEE-754 32-bit Single-Precision Floating-Point Numbers
+In 32-bit single-precision floating-point representation:
+
+- The most significant bit is the sign bit (S), with 0 for positive numbers and 1 for negative numbers.
+- The following 8 bits represent exponent (E).
+- The remaining 23 bits represents fraction (F) also called as Mantessa.
+- These FP number have a bias value of 127.
+![image](https://github.com/GauthamMulay/pes_fpmul/assets/113660503/0aa72463-7f14-4e95-bcbd-b3407da466a7)
+
+In this project, simplified FP numbers of 11 bits are used consisting of:
+- Sign -> 1 bit
+- Exponent -> 6 bits
+- Mantessa -> 4 bits
+- Bias -> 31
+## Multiplication of Floating point number
+1. **XOR the sign bits:**
+  Take the sign bits of the two floating-point numbers and perform an XOR operation. This determines the sign of the resulting product.
+2. **Denormalize the exponents:**
+  Subtract the bias (a constant value specific to the floating-point representation) from each exponent. This step adjusts the exponents to a denormalized form.
+3. **Add the exponents:**
+  Add the denormalized exponents together. This sum represents the combined exponent of the resulting product.
+4. **Add 1 as MSB for the mantissa and multiply the same:**
+ Adjust the mantissas of the two floating-point numbers. Specifically, add 1 as the most significant bit (MSB) of each mantissa. This step prepares the mantissas for multiplication.
+5. **Check and adjust the exponent:**
+  After multiplying the adjusted mantissas, check the MSB (most significant bit) of the resulting product. If the MSB is 1 (indicating a normalized result), add the bias back to the exponent sum obtained in step 
+  This adjustment ensures the exponent correctly reflects the normalization of the product.
+   
 
 
 ## Simulation
